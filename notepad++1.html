@@ -1,0 +1,2433 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"99c232e25a","applicationID":"2847584","transactionName":"dg1dRRFYCg9QQxlQQWoDQ0E8RBIMR1QZUFtRB0s=","queueTime":8,"applicationTime":719,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UgIEVVNTGwEIUFZXDwU="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),s.xhrWrappable&&t(9),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),c=t(7),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),c.on(m,function(){this.bstStart=Date.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(17)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",c)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),c=t(16),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[y[n]];return f&&f.push([g,n,r,i]),i}}function p(t,e){v[t]=h(t).concat(e)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var v={},y={},g={on:p,emit:n,get:m,listeners:h,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(15),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=g.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(v,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(15),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(12);var w=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},y=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:w,features:{},xhrWrappable:y};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,10,4,3]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="" name="description" />
+  <meta content="" name="author" />
+  <style>
+#page:after {
+  opacity: 1!important;
+  background-image: url('/assets/img/bg-dark.jpg')!important;
+}
+.section-manage .manage-top p a, #resume_session, #close_session, #resume_player, #close_player, #resume_session:visited, #close_session:visited, #resume_player:visited, #close_player:visited{
+  color: #3498db !important;
+}
+</style>
+
+
+  <title>Frame Launchpad</title>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="SbamEg++0KBmzdZhFDLbHhQ8Bp7okre+1N2LBwR1NbM=" name="csrf-token" />
+  
+  <link href="https://d1xem3lp7f2hdd.cloudfront.net/assets/it_app_store-b47d195fb0768a85c6016f19a58b145a.css" media="all" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,200italic,300italic,400italic,600italic,700italic|Gochi+Hand" rel="stylesheet">
+
+
+  <link href="https://d1xem3lp7f2hdd.cloudfront.net/assets/favicon-3ba4d5c4a46cfdf1065de23a4747b6cb.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+
+    <!-- begin olark code -->
+<script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+    f[z]=function(){
+        (a.s=a.s||[]).push(arguments)};var a=f[z]._={
+    },q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+        f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+        0:+new Date};a.P=function(u){
+        a.p[u]=new Date-a.p[0]};function s(){
+        a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+        hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+        return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+        b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+        b.contentWindow[g].open()}catch(w){
+        c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+        var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+        b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+    loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('7395-714-10-8370');/*]]>*/</script><noscript><a href="https://www.olark.com/site/7395-714-10-8370/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+<!-- end olark code -->
+
+
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+
+
+<body class="">
+
+
+    <div id="not-active-bar" style="background-color: #5080b0;" class="alert alert-yellow fade in">
+    <a href='/launchpad/setup/upgrade'>Upgrade now to install your own apps</a>
+    <a class="close close-upgrade" data-dismiss="alert" aria-hidden="true">×</a>
+    </div>
+
+
+  <div id="page" class="appstore_edu-page trial">
+      <div class="page-scroll">
+        <header id="masthead">
+          <input id="launchpad-email" name="launchpad-email" type="hidden" value="bannerbomb55@gmail.com" />
+
+          <div><!-- div to avoid triggering of both topbar dropdowns -->
+               <div id="admin-menu-hint-dropdown" class="bar left">
+                <span class="mf2-institution">
+                  <a href="">
+                    <img alt="Launchpad" src="https://s3.amazonaws.com/mf2cpanel-production/launchpad_logos/assets/000/000/342/original/launchpad.png?1432205552" />
+                  </a>
+                </span>
+                <br>
+                <span class="section-title">Demo account</span>
+              </div>
+              <!-- custom logo -->
+
+          </div>
+
+          <nav id="site-navigation">
+            <ul class="nav-tabs">
+              <li><a id="application_tab_link" href="#apps" data-toggle="tab">Applications</a></li>
+                <li><a id="files_tab_link" href="#files" data-toggle="tab">Files</a>
+                <a id="admin-files-hint" style="display:none" href="javascript:;" class="tipdot right" data-toggle="popover" data-placement="right" data-content="The Files tab is where you go to connect your cloud storage, like Dropbox or Google Drive. <br><span class='close' title='Close'>Close this message</span>" data-original-title="" title=""><img alt="frame app store tip" class="animated infinite pulse" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/img/tipdot-6ef159e745026ca68f7085e1d66938c3.svg" /></a>
+                </li>
+            </ul><!-- .nav-tabs -->
+          </nav><!-- .site-navigation -->
+
+          <div class="bar dropdown profile right username-only">
+            <a id="profile-dropdown-hint" href="#" class="profile-trigger clear" data-toggle="dropdown">
+                <img alt="Jacob Bridgers" class="avatar left" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/avatar.png" />
+
+              <div class="left">
+                <div class="launchpad-user">
+                  <span class="profile-username">Jacob Bridgers <span><img alt="frame drop icon" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/img/drop-8e7f3a1f78eddd785127d46b81e84aea.svg" /></span></span>
+                    <span class="profile-hours"><span id="phours"></span></span>
+                </div>
+              </div><!-- .left -->
+            </a><!-- .profile-trigger -->
+
+             <a id="admin-profile-hint" style="display:none" href="#" class="tipdot left" data-toggle="popover" data-placement="bottom" data-content="This is the user menu. Use it to manage your own account and to sign out when finished. <span class='close' title='Close'>Close this message</span>" data-original-title="" title=""><img alt="frame app store tip" class="animated infinite pulse" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/img/tipdot-6ef159e745026ca68f7085e1d66938c3.svg" /></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+              <li class="email"><span title="bannerbomb55@gmail.com">bannerbomb55@gmail.com</span></li>
+              <li><a href="/launchpad/setup/account" id="launchpad-account">Account</a></li>
+
+                <li><a href="/launchpad/setup/upgrade">Upgrade</a></li>
+              <li><a class="sign-out-link confirm_closing_sessions" data-method="delete" href="/users/sign_out" rel="nofollow">Sign Out</a></li>
+            </ul>
+          </div><!-- .dropdown -->
+        </header><!-- #masthead -->
+        <div id="main">
+  <div class="compact tab-content">
+    <section id="apps" class="tab-pane fade in active">
+  <div id="app-section">
+    <div class="row">
+  <div class="col10 center">
+    <div class="section-header clear">
+      <h1 class="section-title left">Windows Apps </h1>
+      <span class="system-status green" style="display:none;"><a href="#" rel="tooltip" data-toggle="modal" data-target="#systemstatus" class="right" style="float:right"><div class="green"></div></a><span class="green status" style="float:right"></span></span>
+      <span class="system-status orange" style="display:none;"><a href="#" rel="tooltip" data-toggle="modal" data-target="#systemstatus" class="right" style="float:right"><div class="orange"></div></a><span class="" style="float:right"><img alt="Spinner fffafa 16" class="orange status loading spin" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/img/spinner_fffafa_16-d5a752d940dfe015add504af486d9b7c.png" style="float:left;margin-top:-5px" /><span class="orange status loading" style="float:right"></span></span></span>
+      <span class="system-status progress-orange" style="display:none;"><a href="#" rel="tooltip" data-toggle="modal" data-target="#systemstatus" class="right" style="float:right"><div class="orange"></div></a><span class="orange progress status" style="float:right"></span></span>
+      <span class="system-status red" style="display:none"><a href="#" rel="tooltip" data-toggle="modal" data-target="#systemstatus" class="right" style="float:right"><div class="red"></div></a><span class="red status" style="float:right"></span></span>
+      <div id="production" class="system-notes right">
+        <p class="small-player-bar" style="display:none">
+          <span id="small_player_buttons_bar">
+            <span>Session is already open.</span>
+            <a id="resume_player" class="btn-resume mf2-app-link" href="#">Resume</a> or <a id="close_player" href="#">Power off</a>
+          </span>
+        </p>
+
+        <p class="last-app-closed-bar" style="display:none">
+          <span id="last-app-closed-buttons-bar">
+            <span class="session_title">Session is open (0 apps).</span>
+            <a id="close_session" href="#">Power off</a>
+          </span>
+        </p>
+
+        <p class="session-bar" style="display:none" data-type="production">
+          <span id="session_buttons_bar">
+            <span class="session_title">Session is running.</span>
+            <input type="hidden" class="open-session-name" value="" />
+            <input type="hidden" class="open-session-id" value="" />
+            <input type="hidden" class="open-session-start-time" value="" />
+            <span id="resume_container"><a id="resume_session" class="btn-resume mf2-app-link"  href="javascript:">Resume</a> or </span>
+            <a id="close_session" href="#">Power off</a>
+          </span>
+        </p>
+
+        <p class="pre-session-bar" style="display:inline">
+          <span >
+            Checking status...
+          </span>
+        </p>
+      </div>
+    </div>
+    <!-- .section-header -->
+  </div>
+  <!-- .col10 -->
+</div>
+<div id="no-apps" class="row" style="display:none">
+  <div class="col10 center">
+    <div class="welcome-content">
+      <h1>Nothing to see here...</h1>
+<p>It’s up to your admin to configure what apps you can use on Frame -- right now, no apps are ready to run. </p>
+<p>To request new apps or have them enabled, please contact your administrator.</p>
+
+    </div><!-- .welcome-content -->
+
+  </div><!-- .col10 -->
+</div>
+<!-- .row -->
+<div class="row">
+  <div class="col10 center">
+    <div class="col10 apps-blank sandbox-apps" style="display:none">
+      <h1 class="light blank-desc handwritten">Welcome to your Frame dashboard.<br/>
+        Your apps will show up here after you install<br/>
+        and onboard them using the Desktop below.</h1>
+    </div>
+    <!-- .col10 -->
+    <ul class="app-list windows-apps clear" style="">
+
+        <li class="app" id="app-17260" data-app-id="17260" style="">
+          <a title="" class="sandbox mf2-app-link app-link" data-hash="2KQ09OGz" data-app-id="17260" data-apps-in-menu="[77082, 77081, 29336, 77083, 29338, 17256, 17260]" data-can-idle="true" href="javascript:;" data-original-title="Open from sandbox">
+            <span class="app-icon">
+              <img alt="Paint" class="app-icon-large" src="https://d35ys0o2xppy2a.cloudfront.net/app_icons/images/000/010/901/thumb/416f1a00f2e032fb0b10f25ec52444a9.png?1436943895" /></span>
+            <span class="app-title">
+              Paint
+            </span>
+          </a>
+        </li>
+        <!-- .app -->
+        <li class="app" id="app-29336" data-app-id="29336" style="">
+          <a title="" class="sandbox mf2-app-link app-link" data-hash="npJ90VKR" data-app-id="29336" data-apps-in-menu="[77082, 77081, 29336, 77083, 29338, 17256, 17260]" data-can-idle="true" href="javascript:;" data-original-title="Open from sandbox">
+            <span class="app-icon">
+              <img alt="Tableau Public 9.0" class="app-icon-large" src="https://d35ys0o2xppy2a.cloudfront.net/app_icons/images/000/009/945/thumb/9f3f302794c35e95d69cb4e48a5b4979.png?1434568852" /></span>
+            <span class="app-title">
+              Tableau Public 9.0
+            </span>
+          </a>
+        </li>
+        <!-- .app -->
+        <li class="app" id="app-77081" data-app-id="77081" style="">
+          <a title="" class="sandbox mf2-app-link app-link" data-hash="Qjv4Y7K7" data-app-id="77081" data-apps-in-menu="[77082, 77081, 29336, 77083, 29338, 17256, 17260]" data-can-idle="true" href="javascript:;" data-original-title="Open from sandbox">
+            <span class="app-icon">
+              <img alt="Excel 2016" class="app-icon-large" src="https://d35ys0o2xppy2a.cloudfront.net/app_icons/images/000/042/096/thumb/c0efe6e9ac515c8c321839b890e4d1e7.png?1457019248" /></span>
+            <span class="app-title">
+              Excel 2016
+            </span>
+          </a>
+        </li>
+        <!-- .app -->
+        <li class="app" id="app-77082" data-app-id="77082" style="">
+          <a title="" class="sandbox mf2-app-link app-link" data-hash="VGzzYBG7" data-app-id="77082" data-apps-in-menu="[77082, 77081, 29336, 77083, 29338, 17256, 17260]" data-can-idle="true" href="javascript:;" data-original-title="Open from sandbox">
+            <span class="app-icon">
+              <img alt="Word 2016" class="app-icon-large" src="https://d35ys0o2xppy2a.cloudfront.net/app_icons/images/000/042/097/thumb/31cff7873135003283de7715909fd43d.png?1457019249" /></span>
+            <span class="app-title">
+              Word 2016
+            </span>
+          </a>
+        </li>
+        <!-- .app -->
+        <li class="app" id="app-17256" data-app-id="17256" style="">
+          <a title="" class="sandbox mf2-app-link app-link" data-hash="mjOD5NG1" data-app-id="17256" data-apps-in-menu="[77082, 77081, 29336, 77083, 29338, 17256, 17260]" data-can-idle="true" href="javascript:;" data-original-title="Open from sandbox">
+            <span class="app-icon">
+              <img alt="Notepad++" class="app-icon-large" src="https://d35ys0o2xppy2a.cloudfront.net/app_icons/images/000/005/319/thumb/1f71624f379fb0be5ec887dc597d03cd.png?1426088418" /></span>
+            <span class="app-title">
+              Notepad++
+            </span>
+          </a>
+        </li>
+        <!-- .app -->
+        <li class="app" id="app-29338" data-app-id="29338" style="">
+          <a title="" class="sandbox mf2-app-link app-link" data-hash="ep0qZDjV" data-app-id="29338" data-apps-in-menu="[77082, 77081, 29336, 77083, 29338, 17256, 17260]" data-can-idle="true" href="javascript:;" data-original-title="Open from sandbox">
+            <span class="app-icon">
+              <img alt="Wordpad" class="app-icon-large" src="https://d35ys0o2xppy2a.cloudfront.net/app_icons/images/000/010/915/thumb/39b06619225485cec859ed67ff4fabb7.png?1436943903" /></span>
+            <span class="app-title">
+              Wordpad
+            </span>
+          </a>
+        </li>
+        <!-- .app -->
+        <li class="app" id="app-77083" data-app-id="77083" style="">
+          <a title="" class="sandbox mf2-app-link app-link" data-hash="Vpk8lajA" data-app-id="77083" data-apps-in-menu="[77082, 77081, 29336, 77083, 29338, 17256, 17260]" data-can-idle="true" href="javascript:;" data-original-title="Open from sandbox">
+            <span class="app-icon">
+              <img alt="PowerPoint 2016" class="app-icon-large" src="https://d35ys0o2xppy2a.cloudfront.net/app_icons/images/000/042/098/thumb/41cd1b19f52357ceedd83c15c8375638.png?1457019250" /></span>
+            <span class="app-title">
+              PowerPoint 2016
+            </span>
+          </a>
+        </li>
+        <!-- .app -->
+    </ul>
+    <p id="new-windows-app" class="first-app-note " style="display:none">Voilà! You just added a Windows app to the Launchpad. Next, click the icon to run it. <a href="#">Close this message</a></p>
+    <!-- .app-list -->
+    <div class="row apps-loading" style="display: none;">
+    <div class="col12 text-center" style="margin: 3em auto">
+      <img alt="Loading icon" class="spin center" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/img/loading-icon-15d831df1194ba2ae93607397ea7a702.png" />
+      <br>
+      <span class="loading-description dark">Loading...</span>
+    </div><!-- .col12 -->
+  </div>
+  </div>
+  <!-- .col10 -->
+</div>
+
+
+<div id="systemstatus" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header clear">
+                <h1 class="modal-title left">System Status (Windows Apps)</h1>
+            </div>
+            <div class="modal-body">
+                <p>The status of the system serving Windows apps is color-coded to let you quickly check if you can run them.</p>
+                <ul>
+                    <li>
+                        <span style="color: #22c25a">Green:</span> The system is ready
+                        <br><span class="small-text">All systems are operational and ready to go.</span>
+                    </li>
+                    <li>
+                        <span style="color: #f5a623">Orange:</span> The system will be available shortly
+                        <br><span class="small-text">The system is not available at the moment, but should be available shortly (in most cases, the system is powering off or starting).</span>
+                    </li>
+                    <li>
+                        <span style="color: #ce4949">Red:</span> The system is offline
+                        <br><span class="small-text">All resources are offline. Ask your administrator to turn the system on.</span>
+                    </li>
+                </ul>
+                <p class="small-text">Note: This indicator affects only Windows apps. Web apps will be available at all times.</p>
+
+
+            </div>
+            <!-- .modal-body -->
+            <div class="modal-footer clear">
+                <a href="#" class="btn btn-blue right" data-dismiss="modal" aria-hidden="true">Close</a>
+            </div>
+            <!-- .modal-footer -->
+        </div>
+        <!-- .modal-content -->
+    </div>
+    <!-- .modal-dialog -->
+</div>
+<!-- #systemstatus .modal -->
+
+
+  </div>
+    <div class="row  ">
+    <div class="col10 center">
+      <div class="section-header clear">
+        <h1 class="section-title left">Web Apps</h1>
+      </div>
+      <!-- .section-header -->
+    </div>
+    <!-- .col10 -->
+  </div>
+  <!-- .row -->
+  <div class="row  ">
+    <div class="col10 center">
+      <ul class="app-list web-apps clear" style="display:none">
+          <li class="app" id="app-627" data-web-id="627" style="">
+            <a href="javascript:;" rel="http://www.slack.com" class="app-link">
+              <span class="app-icon"><img alt="650582fc7ac0bd51f6ad9a470eb5db92" src="https://d35ys0o2xppy2a.cloudfront.net/web_app_icons/images/000/000/666/thumb/650582fc7ac0bd51f6ad9a470eb5db92.png?1426024809" /></span>
+              <span class="app-title">
+                Slack
+              </span>
+            </a>
+          </li>
+          <!-- .app -->
+          <li class="app" id="app-626" data-web-id="626" style="">
+            <a href="javascript:;" rel="http://www.google.com" class="app-link">
+              <span class="app-icon"><img alt="031769512e95ac3e2c988ed631358b52" src="https://d35ys0o2xppy2a.cloudfront.net/web_app_icons/images/000/000/665/thumb/031769512e95ac3e2c988ed631358b52.png?1426024807" /></span>
+              <span class="app-title">
+                Google
+              </span>
+            </a>
+          </li>
+          <!-- .app -->
+          <li class="app" id="app-2484" data-web-id="2484" style="">
+            <a href="javascript:;" rel="http://www.brianmadden.com/blogs/brianmadden/archive/2015/07/02/frame-new-name-for-quot-mainframe2-quot-launches-cloud-based-h-264-windows-remote-app-service-for-enterprises-look-out-vmware-amp-citrix.aspx" class="app-link">
+              <span class="app-icon"><img alt="3652f35e756a345acd696ee193dbf0eb" src="https://d35ys0o2xppy2a.cloudfront.net/web_app_icons/images/000/002/562/thumb/3652f35e756a345acd696ee193dbf0eb.png?1435901115" /></span>
+              <span class="app-title">
+                Review of Frame on brianmadden.com
+              </span>
+            </a>
+          </li>
+          <!-- .app -->
+          <li class="app" id="app-2389" data-web-id="2389" style="">
+            <a href="javascript:;" rel="http://www.fra.me" class="app-link">
+              <span class="app-icon"><img alt="Ec766cf610d3fccc856b56d347e50d4c" src="https://d35ys0o2xppy2a.cloudfront.net/web_app_icons/images/000/002/467/thumb/ec766cf610d3fccc856b56d347e50d4c.png?1435059852" /></span>
+              <span class="app-title">
+                Frame website
+              </span>
+            </a>
+          </li>
+          <!-- .app -->
+      </ul>
+      <!-- .app-list -->
+      <div class="row web-apps-loading" style="display:none">
+        <div class="col12 text-center" style="margin: 3em auto">
+          <img alt="Loading icon" class="spin center" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/img/loading-icon-15d831df1194ba2ae93607397ea7a702.png" />
+        </div>
+        <!-- .col10 -->
+      </div>
+    </div>
+    <!-- .col10 -->
+  </div>
+  <!-- .row -->
+
+</section>
+<!-- #applications -->
+
+      <div id="files-loading" style="display: none">
+  <div class="loading-overlay"><img alt="Loading icon" class="loader spin center" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/img/loading-icon-15d831df1194ba2ae93607397ea7a702.png" /></div>
+</div>
+<section id="files" class="tab-pane fade">
+  <div class="row">
+    <div class="col12 center text-center">
+        <div data-drive="dropbox" class="files-service dropbox-mounted" style="display:none">
+          <span class="service-icon"><img alt="frame files dropbox" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/img/ico-files_dropbox-80bd9fe0714f45ca19a0928be9085193.png" /></span>
+          <span class="service-name">Dropbox</span>
+          <span id="dropbox-mounted-username" class="service-user"></span>
+          <a href="javascript:;" class="unmount-link service-connection">Disconnect</a>
+        </div>
+        <div data-drive="dropbox" class="files-service dropbox-unmounted" style="display:none">
+          <span class="service-icon"><img alt="frame files dropbox" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/img/ico-dropbox_unmounted-5acb9f9996f00cb5b7bfdf77908ba656.png" /></span>
+          <span class="service-name">Dropbox</span>
+          <span id="dropbox-mounted-username" class="service-user">Not Connected</span>
+          <a href="javascript:;" class="mount-link service-connection">Connect</a>
+        </div>
+      <div data-drive="gdrive" class="files-service gdrive-mounted" style="display:none">
+        <span class="service-icon"><img alt="frame files gdrive drive" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/img/ico-drive-mounted-670cba35006191734a8d60d234a3dc79.png" /></span>
+        <span class="service-name">Google Drive (Beta)</span>
+        <span class="service-user"></span>
+        <a href="javascript:;" class="unmount-link service-connection">Disconnect</a>
+      </div>
+      <div data-drive="gdrive" class="files-service gdrive-unmounted" style="display:none">
+        <span class="service-icon"><img alt="frame files gdrive drive" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/img/ico-drive-unmounted-adf9996dab73a3e2a58f8f0c035d8986.png" /></span>
+        <span class="service-name">Google Drive (Beta)</span>
+        <span class="service-user">Not connected</span>
+        <a href="javascript:;" class="mount-link service-connection">Connect</a>
+      </div>
+        <div data-drive="box" class="files-service box-mounted" style="display:none">
+          <span class="service-icon"><img alt="frame files box drive" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/img/icon-box-mounted-4d36f353c060ce30f857b80efa765c54.png" /></span>
+          <span class="service-name">Box (Beta)</span>
+          <span class="service-user"></span>
+          <a href="javascript:;" class="unmount-link service-connection">Disconnect</a>
+        </div>
+        <div data-drive="box" class="files-service box-unmounted" style="display:none">
+          <span class="service-icon"><img alt="frame files box drive" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/img/icon-box-unmounted-b22c296184c8fc20954f374a8e31f0d2.png" /></span>
+          <span class="service-name">Box (Beta)</span>
+          <span class="service-user">Not connected</span>
+          <a href="javascript:;" class="mount-link service-connection">Connect</a>
+        </div>
+      <!-- .col6 -->
+    </div>
+    <!-- .col7 -->
+  </div>
+  <!-- .row -->
+  <div class="row files-desc">
+    <div class="col6 center">
+      <p>Connecting your cloud storage of choice will let you access files from the Windows apps you use. Each cloud service will be visible from inside your apps as a new network drive (G: for Dropbox, F: for Google Drive, and so on).</p>
+      <p>Haven’t started using cloud storage yet? No worries, you can always upload and download files directly from your apps.</p>
+    </div>
+    <!-- .col6 -->
+  </div>
+  <!-- .row -->
+</section>
+
+<div id="open-session-modal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+                <h1 class="modal-title">Session in progress</h1>
+            </div>
+            <div class="modal-body">
+                <p>Before you can mount Dropbox you need to quit the session that's currently in progress (you'll lose all unsaved data).</p>
+            </div>
+            <div class="modal-footer clear">
+                <a href="#" class="btn cancel" data-dismiss="modal" aria-hidden="true">Cancel</a>
+                <a href="#" class="btn btn-blue " id="quit-session-confirm">Quit session and mount Dropbox</a>
+            </div>
+        </div>
+        <!-- .modal-content -->
+    </div>
+    <!-- .modal-dialog -->
+</div>
+<div id="open-session-unmount-modal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+                <h1 class="modal-title">Session in progress</h1>
+            </div>
+            <div class="modal-body">
+                <p>Before you can unmount Dropbox you need to quit the session that's currently in progress (you'll lose all unsaved data).</p>
+            </div>
+            <div class="modal-footer clear">
+                <a href="#" class="btn cancel" data-dismiss="modal" aria-hidden="true">Cancel</a>
+                <a href="#" class="btn btn-blue " id="quit-session-unmount-confirm">Quit session and unmount Dropbox</a>
+            </div>
+        </div>
+        <!-- .modal-content -->
+    </div>
+    <!-- .modal-dialog -->
+</div>
+ <!-- #files -->
+  </div> <!-- .compact -->
+</div> <!-- #main -->
+<div id="mobile-warning-modal" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title light"> Warning </h1>
+      </div>
+      <div class="modal-body">
+        <p>The browser on your device has limited support for Frame, so you might see subpar performance. For the best experience connect from a desktop OS (e.g. Windows, Mac, Linux or ChromeOS) using Chrome, Firefox or Safari. You can also use the Frame Terminal app on iOS.</p>
+
+
+        <span id="mobile-warning-remember-me" style="">
+          <input type="checkbox" id="resume-session-checkbox"><label for="resume-session-checkbox">Do not show this message again  </label> <br>
+        </span>
+      </div>
+      <div class="modal-footer clear">
+        <a href="javascript:;" class="btn btn-green right confirm">Continue</a>
+        <a href="javascript:;" class="btn btn-link cancel right" data-dismiss="modal">Cancel</a>
+      </div>
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div>
+
+
+<div id="disconnect" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+                <h1 class="modal-title">Want to disconnect <span class="storage-name">Dropbox</span>?</h1>
+            </div>
+            <div class="modal-body">
+              <p>You won't be able to access files from <span class="storage-name">Dropbox</span> until you connect it again.</p>
+            </div>
+            <div class="modal-footer clear">
+                <a href="#" class="btn cancel" data-dismiss="modal" aria-hidden="true">Cancel</a>
+                <a href="#" class="btn btn-red unmount-link">Disconnect</a>
+            </div>
+        </div>
+        <!-- .modal-content -->
+    </div>
+    <!-- .modal-dialog -->
+</div>
+
+<!-- merged mount/unmount multiple status dialogs -->
+<div id="dialog-unmounting-in-progress" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title light">  <span class="unmount-in-progress">Disconnecting <span class="storage-name">Dropbox</span></span>
+</h1>
+      </div>
+
+      <div class="modal-body">
+        <p class="unmount-in-progress">Please stand by...</p>
+<p class="error"></p>
+
+<p class="dialog-horiz-loader text-center">
+<img alt="Loading icon" class="dialog-horiz-loader spin white" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/img/loading-icon-15d831df1194ba2ae93607397ea7a702.png" />
+<img alt="Loading icon dark" class="dialog-horiz-loader spin dark" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/img/loading-icon-dark-f976ed4186f69c1ec261464b51f63a76.png" />
+</p>
+
+      </div>
+
+
+      <div class="modal-footer clear">
+          <a href="javascript:;" id="modal-ok" class="btn btn-green ok right" data-dismiss="modal">Close</a>
+
+      </div>
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+
+<div id="dialog-continue-detach" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title light">STORAGE DISCONNECTED</h1>
+      </div>
+
+      <div class="modal-body">
+        
+<p>
+Your <span class="storage-name">Dropbox</span> is now disconnected.
+</p>
+<p>
+If you’re on a public computer, you should also sign out of <span class="storage-name">Dropbox</span> in your browser.
+</p>
+
+      </div>
+
+
+      <div class="modal-footer clear">
+          <a href="javascript:;" id="modal-ok" class="btn btn-green ok right" data-dismiss="modal">SIGN OUT OF <span class="storage-name">DROPBOX</span></a>
+
+          <a href="javascript:;" id="modal-cancel" class="btn btn-link cancel right" data-dismiss="modal">Stay signed in</a>
+      </div>
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+
+<div id="disconnect-google" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+                <h1 class="modal-title">Want to disconnect Google Drive?</h1>
+            </div>
+            <div class="modal-body">
+                <p>You won't be able to access files from Google Drive until you connect it again.</p>
+            </div>
+            <div class="modal-footer clear">
+                <a href="#" class="btn cancel" data-dismiss="modal" aria-hidden="true">Cancel</a>
+                <a href="#" class="btn btn-red unmount-link">Disconnect</a>
+            </div>
+        </div>
+        <!-- .modal-content -->
+    </div>
+    <!-- .modal-dialog -->
+</div>
+
+
+<div id="quit-modal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+                <h1 class="modal-title">POWERING OFF IN <span id="close-count">60</span> SECONDS</h1>
+            </div>
+            <div class="modal-body">
+                <p><strong>Power off</strong> when you’re done to <strong>avoid unnecessary extra usage</strong>. All running applications will be closed, which may cause you to <strong>lose unsaved work.</strong></p>
+            </div>
+            <div class="modal-footer clear">
+                <a href="#" class="btn btn-link cancel" data-dismiss="modal" aria-hidden="true">Cancel</a>
+                <a href="#" class="btn btn-red " id="quit-confirm">Power off</a>
+            </div>
+        </div>
+        <!-- .modal-content -->
+    </div>
+    <!-- .modal-dialog -->
+</div>
+
+ <div id="switchapphelp" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header clear">
+                <h1 class="modal-title left">Apps in Launchpad: Admin view</h1>
+            </div>
+            <div class="modal-body">
+              <p>This switch affects only you, the administrator. Your users will see either Sandbox or Production apps, depending on the master switch in your Dashboard (Settings tab).</p>
+            </div>
+            <!-- .modal-body -->
+            <div class="modal-footer clear">
+                <a href="#" class="btn cancel" data-dismiss="modal" aria-hidden="true">Cancel</a>
+                <a href="javascript:;" class="btn btn-blue" id="swhitch_button">OK</a>
+            </div>
+            <!-- .modal-footer -->
+        </div>
+        <!-- .modal-content -->
+    </div>
+    <!-- .modal-dialog -->
+</div>
+<!-- #systemstatus .modal -->
+    <!-- .modal -->
+
+
+        <footer id="colophon"  >
+          <div style="display: block; width: 100%;">
+ <a href="https://app.fra.me/launchpad/setup/upgrade" style="color: #ddd;">Want to install and run your own apps? Start here.</a>
+</div>
+<div style="display: block; width: 100%;">
+2016 © Frame |  <a href="https://fra.me/" target="_blank" style="color: #ddd;">Website</a>  &bull;  <a href="http://blog.fra.me" target="_blank" style="color: #ddd;">Blog</a> &bull; <a href="http://forum.fra.me" target="_blank" style="color: #ddd;">Forum</a> &bull;  <a href="https://fra.me/walkthrough" target="_blank" style="color: #ddd;">Session guide</a>
+
+</div>
+
+
+
+
+        </footer><!-- #colophon -->
+
+      </div><!-- .page-scroll -->
+  </div><!-- #page -->
+
+  <script src="https://d1xem3lp7f2hdd.cloudfront.net/assets/it_app_store-63311afbe8afdeb11ad5168069c38177.js"></script>
+  
+<!-- Error modal --> 
+<div id="error-modal" class="modal fade modal-error" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 id="error-title" class="modal-title light">Error</h1>
+      </div>
+
+      <div class="modal-body">
+        <p id="error-message"></p>
+      </div>
+
+      <div class="modal-footer clear">
+        <a href="#" class="btn btn-green right" data-dismiss="modal">Close</a>
+      </div>
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+<!-- Error modal --> 
+<div id="warning-modal" class="modal fade modal-warning" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 id="warning-title" class="modal-title light">Warning</h1>
+      </div>
+
+      <div class="modal-body">
+        <p id="warning-message"></p>
+      </div>
+
+      <div class="modal-footer clear">
+        <a href="#" class="btn btn-green right" data-dismiss="modal">Ok</a>
+      </div>
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+<!-- Notification modal -->
+<div id="save-settings-modal" class="modal fade modal-info" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title light">Success</h1>
+      </div>
+
+      <div class="modal-body">
+        <p></p>
+      </div>
+
+      <div class="modal-footer clear">
+        <a href="javascript:;" class="btn btn-green right" data-dismiss="modal">OK</a>
+      </div>
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div>
+
+<!-- Confirmation modal -->
+<div id="confirmation-modal" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title light">Warning</h1>
+      </div>
+      
+      <div class="modal-body">
+        <p></p>
+      </div>
+      
+      <div class="modal-footer clear">
+        <a href="javascript:;" class="btn btn-green right confirm">Confirm</a>
+        <a href="javascript:;" class="btn btn-link cancel right" data-dismiss="modal">Cancel</a>
+      </div>
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+
+
+  <div id="signout_from_google_confirm-modal" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title light">Signing out</h1>
+      </div>
+
+      <div class="modal-body">
+        <p> Do you want to sign out from Google? </p>
+      </div>
+
+      <div class="modal-footer clear">
+        <a href="javascript:;" class="btn btn-green right confirm" data-dismiss="modal">Yes, sign out</a>
+        <a href="javascript:;" class="btn btn-link cancel right" data-dismiss="modal">No, stay signed in to Google</a>
+      </div>
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+
+    
+<!-- Error modal --> 
+<div id="error-modal" class="modal fade modal-error" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 id="error-title" class="modal-title light">Error</h1>
+      </div>
+
+      <div class="modal-body">
+        <p id="error-message"></p>
+      </div>
+
+      <div class="modal-footer clear">
+        <a href="#" class="btn btn-green right" data-dismiss="modal">Close</a>
+      </div>
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+<!-- Error modal --> 
+<div id="warning-modal" class="modal fade modal-warning" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 id="warning-title" class="modal-title light">Warning</h1>
+      </div>
+
+      <div class="modal-body">
+        <p id="warning-message"></p>
+      </div>
+
+      <div class="modal-footer clear">
+        <a href="#" class="btn btn-green right" data-dismiss="modal">Ok</a>
+      </div>
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+<!-- Notification modal -->
+<div id="save-settings-modal" class="modal fade modal-info" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title light">Success</h1>
+      </div>
+
+      <div class="modal-body">
+        <p></p>
+      </div>
+
+      <div class="modal-footer clear">
+        <a href="javascript:;" class="btn btn-green right" data-dismiss="modal">OK</a>
+      </div>
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div>
+
+<!-- Confirmation modal -->
+<div id="confirmation-modal" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title light">Warning</h1>
+      </div>
+      
+      <div class="modal-body">
+        <p></p>
+      </div>
+      
+      <div class="modal-footer clear">
+        <a href="javascript:;" class="btn btn-green right confirm">Confirm</a>
+        <a href="javascript:;" class="btn btn-link cancel right" data-dismiss="modal">Cancel</a>
+      </div>
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+
+
+  <script src="https://d1xem3lp7f2hdd.cloudfront.net/assets/embed/mf2MinimalUI-a41c4ce0e73aa91579536a1b498f6f7a.js"></script>
+  <script src="https://d1xem3lp7f2hdd.cloudfront.net/assets/utils/mf2Common-911234cdcc66f9fd19186592bff1bb2b.js"></script>
+  <script src="https://d1xem3lp7f2hdd.cloudfront.net/assets/libs/userAgent-4736d90b833b06fed7ee425e925c24b8.js"></script>
+  <script src="https://d1xem3lp7f2hdd.cloudfront.net/assets/js/jquery.dotdotdot-f7eb82e1833e8bb5a043172518c7162c.js"></script>
+  <script src="https://d1xem3lp7f2hdd.cloudfront.net/assets/js_logger_config-5ee418e82c405c07afcc296e89854db5.js"></script>
+  <script src="https://d1xem3lp7f2hdd.cloudfront.net/assets/notification/launchpadWebNotificationsController-42040f520760440361d1004a9ca5e205.js"></script>
+  <script>
+
+  var GwStorageController = function(imgToken) {
+    var controller = {
+      imgToken: imgToken,
+    };
+
+    var FSMountStatus = {
+        OK: 0,
+        FS_MOUNTED_ON_FOLDER: 1,
+        NO_OR_INVALID_TOKEN: 2,
+        CANCELED: 3,
+        UNMOUNTED: 4,
+        UNKNOWN_ERROR: 5,
+        ERROR_MOUNTING_FROM_NODE: 6,
+        UMOUNT_REQUEST: 7,
+        INIT: 8,
+        IN_PROGRESS: 9,
+        UNMOUNT_ERROR: 10
+    };
+
+    var terminalStates = [0, 2, 4, 5, 6, 10];
+
+    var ErrorEvent = function(type, code) {
+      return {
+        type: type,
+        code: code,
+      };
+    };
+
+    function isTerminalState(status) {
+      return terminalStates.indexOf(status) != -1;
+    }
+
+    var mountStatuses = {
+      dropbox: -1,
+      gdrive: -1,
+      box: -1,
+      allDone: function() {
+        return isTerminalState(this.dropbox) && isTerminalState(this.gdrive) && isTerminalState(this.box);
+      }
+    };
+
+    var URL_GATEWAY = 'https://gateway-p01.mainframe2.com';
+    var lastStorageName;
+
+    controller.showUnmountingInProgressDialog = function(storageName, showDark) {
+        console.debug("csc.Showing unmounting in progress for: " + storageName);
+
+        var dialog = $('#dialog-unmounting-in-progress');
+        dialog.find('.dialog-horiz-loader img').hide();
+        if(showDark) {
+          dialog.find('.dialog-horiz-loader img.dark').show();
+        } else {
+          dialog.find('.dialog-horiz-loader img.white').show();
+        }
+
+        if(storageName)
+          dialog.find('.storage-name').html(toHumanStorageName(storageName)).show();
+        dialog.modal('show');
+    }
+
+    controller.updateSessionId = function(sessionId) {
+      this.sessionId = sessionId;
+    }
+
+    controller.hasSession = function() {
+      return !!this.sessionId;
+    }
+
+    controller.unmount = function(storageName) {
+      console.debug("csc.Calling unmount on GW:");
+      try {
+
+        var storageParam = "";
+        if(storageName) {
+          storageParam = '&storage=' + storageName;
+          lastStorageName = storageName;
+        } 
+
+        var urlRequest = URL_GATEWAY + '/webapi/storage/action/umount/' + this.sessionId + '/?user=' + this.imgToken + storageParam;
+
+        loadJSONP(urlRequest, function(data) {
+          if(data.status != 0) {
+            console.debug('csc.unmountRequestStatus: error, data:');
+            console.debug(data.status_message);
+            controller.showError(new ErrorEvent("UnmountRequestError", data.status), "Your storage couldn\'t be unlinked. Please try again.");
+          } else {
+            mountStatuses[storageName] = FSMountStatus.UMOUNT_REQUEST;
+            controller.statusTick();
+          }
+        });
+      } catch(e) {
+        controller.showError(e, 'Your storage couldn\'t be unlinked. Please contact support@fra.me for assistance.');
+      }
+    }
+
+    controller.getGatewayStorageStatus = function() {
+      try {
+        var urlRequest = URL_GATEWAY + '/webapi/storage/status/' + this.sessionId + '/';
+        loadJSONP(urlRequest, function(response) {
+          var continuePolling = false;
+          if(response.status == 0) {
+            data = response.data;
+            if(data.mount_statuses.length == 0) {
+              // try mount again XXX do we need retry??
+              console.debug("csc.response doesn't contain status for any storage. Probably due to nothing previosly mounted...!");
+              if(lastStorageName) {
+                var newMountStatus = FSMountStatus.UNMOUNTED;
+                $(controller).trigger('change.fs.status', { storage: lastStorageName, prevStatus: mountStatuses[lastStorageName], currentStatus: newMountStatus });
+                mountStatuses[lastStorageName] = newMountStatus;
+              }
+            } else {
+              for(var i = 0; i < data.mount_statuses.length; i++) {
+                var ms = data.mount_statuses[i];
+                console.debug(ms);
+                var storageName = ms.storage_name;
+                var newMountStatus = parseInt(ms.status);
+
+                if(!isTerminalState(newMountStatus)) {
+                  continuePolling = true;
+                }
+                if(newMountStatus != mountStatuses[storageName]) {
+                  $(controller).trigger('change.fs.status', { storage: storageName, prevStatus: mountStatuses[storageName], currentStatus: newMountStatus });
+                  mountStatuses[storageName] = newMountStatus;
+                }
+              }
+            }
+          } else {
+            console.debug('csc.getGatewayStorageStatus:');
+            console.debug(data.status_message);
+            controller.showError(new ErrorEvent("StorageStatusError", data.status), "Storage status error. Status retrieval failed");
+          }
+
+          if(continuePolling) {
+            controller.statusTick();
+          }
+        });
+      } catch(e) {
+        controller.showError(e, 'Storage status error. Please contact support@fra.me for assistance.' );
+      }
+    }
+
+    var statusInProgress = false;
+    controller.statusTick = function() {
+      if(!statusInProgress) {
+        statusInProgress = true;
+        setTimeout(function() {
+          console.debug("csc.Status tick, current statuses: ");
+          console.debug(mountStatuses);
+          controller.getGatewayStorageStatus();
+          statusInProgress = false;
+        }, 1000);
+      }
+    }
+
+    return controller;
+  };
+
+</script>
+
+  <script>
+  // Should be part of userAgent, but this script isn't browserified
+  var isMSAppHost = /MSAppHost\x2F/.test(navigator.userAgent) || /WebView\/3\.0/.test(navigator.userAgent);
+
+  var MF2CloudStorage = function(imgToken) {
+    var AUTH_TYPES = ['google-oauth2', 'dropbox-oauth2', 'box', 'onedrive-oauth2'];
+
+    if (!imgToken) {
+      $('#page').removeClass('welcome-page');
+      $('#error-title').text('Error');
+      $('#error-message').html('Authentication token is missing. Try to sign out and sign in again. If the problem persists, please contact us at support@fra.me.');
+      $('#error-modal').modal('show');
+      console.error('Authentication token is missing. This is probably due to the fact that IMG is not properly configured.');
+      return;
+    }
+    var cloudStorage = {
+      imgToken: imgToken
+    };
+
+    var authWindow, authTimer, authStatus;
+
+    var ErrorEvent = function(type, code) {
+
+      return {
+        type: type,
+        code: code,
+        title: FrameErrorTitle(code),
+        message: FrameErrorMessage(code)
+      };
+    };
+
+    var _pollAuthWindow = function(authType) {
+      if (authWindow.closed) {
+        clearInterval(authTimer);
+        authTimer = false;
+        if (authStatus != 'OK') {
+          $(cloudStorage).trigger('error', new ErrorEvent('error', FrameErrorCodes.IMG_AUTH));
+        }
+      } else {
+        // update auth status
+        try {
+          var storages = cloudStorage.get();
+          if (storages[authType]) {
+            authStatus = 'OK';
+            clearInterval(authTimer);
+            authTimer = false;
+            if (!isMSAppHost) {
+              authWindow.close();
+            }
+            return;
+          }
+        } catch (e) {
+          console.debug(e);
+        }
+
+        cloudStorage.getStatus();
+      }
+    };
+
+    // authType: string from AUTH_TYPES
+    cloudStorage.attach = function(authType) {
+      var storages = cloudStorage.get();
+      if (storages.hasOwnProperty(authType)) {
+        // already attached (perhaps in another tab)
+        $(cloudStorage).trigger('storage.update', 'mount');
+        return;
+      }
+      console.debug('Attaching ' + authType);
+      var appUrl = 'https://live.fra.me' + (isMSAppHost ? '/auth_success' : '/html5terminal?auth_return=1');
+
+      var imgParams = {
+        token: this.imgToken,
+        return_url: appUrl,
+        account_type: authType
+      };
+
+      if (authTimer && authWindow) {
+        if (!isMSAppHost) {
+          authWindow.close();
+        }
+        clearInterval(authTimer);
+        authTimer = false;
+        authStatus = false;
+      }
+
+      authWindow = openCenteredWindow('https://img.mainframe2.com/attach/?' + $.param(imgParams), 800, 600);
+      if (authWindow) {
+        authTimer = setInterval(function() {
+          _pollAuthWindow(authType);
+        }, 500);
+      } else {
+        // Patch: Safari seems to block popup when connecting from files tab while player is active (connect first opens the player and then tries to create popup)
+        if ($('#dialog-continue-connect').length > 0) {
+          $('#dialog-continue-connect').modal('show');
+          $('#dialog-continue-connect .btn.ok').unbind('click').click(function() {
+            // try again on confirm
+            authWindow = openCenteredWindow('https://img.mainframe2.com/attach/?' + $.param(imgParams), 800, 600);
+            if (authWindow) {
+              authTimer = setInterval(function() {
+                _pollAuthWindow(authType);
+              }, 500);
+            } else {
+              console.error('Dropbox auth popup blocked by browser');
+            }
+          });
+        } else {
+          console.error('Dropbox auth popup blocked and no confirm dialog available');
+        }
+        // end of patch
+      }
+    };
+
+    cloudStorage.logout = function(authType) {
+      if (authType === undefined)
+        return;
+      var logoutUrl = '';
+      var message = 'Logging out from ';
+      var loadingImgSrc = 'https://d1xem3lp7f2hdd.cloudfront.net/assets/img/loading-icon-15d831df1194ba2ae93607397ea7a702.png';
+      if (authType == 'dropbox-oauth2') {
+        logoutUrl = 'https://dropbox.com/logout';
+        message += 'Dropbox...';
+      } else if (authType == 'google-oauth2') {
+        logoutUrl = 'https://accounts.google.com/logout';
+        message += 'Google...';
+      } else if (authType == 'onedrive-oauth2') {
+        logoutUrl = 'https://login.live.com/logout.srf';
+        message += 'OneDrive...';
+      } else {
+        logoutUrl = 'https://app.box.com/logout/';
+        message += 'Box...';
+      }
+
+      var backgroundLogout = new BackgroundLogout(logoutUrl, loadingImgSrc, {
+        logoutMessage: message
+      });
+      backgroundLogout.executeAsync()
+        .then(function() {
+          $(cloudStorage).trigger('logout.done');
+        });
+    };
+
+    cloudStorage.unlink = function(authType) {
+      cloudStorage.logout(authType);
+      cloudStorage.unlinkWithoutLogout(authType);
+    };
+
+    // renamed due to a conflict with native js detach function
+    cloudStorage.unlinkWithoutLogout = function(authType) {
+
+      var storages = cloudStorage.get();
+      if (!storages.hasOwnProperty(authType)) {
+        console.debug('csc.Already unlinked (perhaps in another tab');
+        $(cloudStorage).trigger('storage.update', 'unmount');
+        return;
+      }
+
+      cloudStorage.unlinkWithoutLogoutNoCheck(authType);
+    };
+
+    cloudStorage.unlinkWithoutLogoutNoCheck = function(authType) {
+      var imgParams = {
+        token: imgToken,
+        account_type: authType
+      };
+      var imgUrl = 'https://img.mainframe2.com/detach/?' + $.param(imgParams);
+      console.debug('Detaching...: ' + imgUrl);
+
+      $.ajax({
+        url: imgUrl,
+        dataType: 'jsonp',
+        // work with the response
+        success: function(data) {
+          if (data.status == '0') {
+            // update cookies
+            cloudStorage.getStatus();
+          } else {
+            console.debug('Detach error:');
+            console.debug(data);
+            cloudStorage.removeAuthTypeFromCookie(authType);
+            $(cloudStorage).trigger('storage.update', 'unmount');
+          }
+        },
+        complete: function() {
+          console.debug('Triggering detach done...');
+          $(cloudStorage).trigger('detach.done');
+        }
+      });
+    };
+
+    cloudStorage.get = function() {
+      var storages = {};
+      try {
+        var jsonStorages = Cookies.get('cloudStorages');
+        if (jsonStorages)
+          storages = JSON.parse(jsonStorages);
+      } catch (e) {
+        console.debug(e);
+      }
+      return storages;
+    };
+
+    cloudStorage.verifyTokens = function() {
+      if (!cloudStorage.verificationInProgress) {
+        cloudStorage.verificationInProgress = true;
+        cloudStorage.verificationWaitList = [];
+        var storages = cloudStorage.get();
+        for (var i = 0; i < AUTH_TYPES.length; i++) {
+          var authType = AUTH_TYPES[i];
+          if (storages[authType]) {
+            cloudStorage.verificationWaitList.push(authType);
+            cloudStorage.verify(authType);
+          }
+        }
+        if (cloudStorage.verificationWaitList.length === 0) {
+          console.debug('Returning verification in progress to false');
+          cloudStorage.verificationInProgress = false;
+        }
+      } else {
+        console.debug('Verification already in progress');
+      }
+    };
+
+    cloudStorage.getStatus = function() {
+      var imgUrl = 'https://img.mainframe2.com/validate/?val=mf2server&token=' + this.imgToken;
+      $.ajax({
+        url: imgUrl,
+        dataType: 'jsonp',
+        // work with the response
+        success: function(data) {
+          if (data.status == '0') {
+            var storages = JSON.stringify(data.cloud_storages);
+            var oldStorages = JSON.stringify(cloudStorage.get());
+            if (!storages)
+              storages = '{}';
+            Cookies.expire('cloudStorages');
+            Cookies.set('cloudStorages', storages);
+            console.debug('Storages old: ' + oldStorages);
+            console.debug('Storages NEW: ' + storages);
+
+            if (storages != oldStorages) {
+              console.debug('Triggering storage.update for: ' + cloudStorage.extractChange(oldStorages, storages));
+              $(cloudStorage).trigger('storage.update', cloudStorage.extractChange(oldStorages, storages));
+              cloudStorage.verifyTokens();
+            } else {
+              console.debug('Nothing changed for storage status');
+              // skip verification while polling is in progress
+              if (!authTimer) {
+                console.debug('Verifying tokens after status');
+                cloudStorage.verifyTokens();
+              }
+            }
+          } else {
+            // display token invalid
+            console.debug('Invalid token');
+          }
+        }
+      });
+    };
+
+    cloudStorage.initialAction = function() {
+      return cloudStorage.extractChange(JSON.stringify({}), JSON.stringify(cloudStorage.get()));
+    };
+
+    cloudStorage.extractChange = function(prev, current) {
+      console.debug('Extract change: ' + prev + '|' + current);
+      for (var i = 0; i < AUTH_TYPES.length; i++) {
+        var elem = AUTH_TYPES[i];
+        if (prev.indexOf(elem) == -1 && current.indexOf(elem) != -1) {
+          return 'mount';
+        }
+        if (prev.indexOf(elem) != -1 && current.indexOf(elem) == -1) {
+          return 'unmount';
+        }
+      }
+      return 'nop';
+    };
+
+    cloudStorage.anyAttached = function() {
+      var storages = cloudStorage.get();
+      console.debug(storages);
+      var returnValue = false;
+      for (var i = 0; i < AUTH_TYPES.length; i++) {
+        returnValue = returnValue || storages.hasOwnProperty(AUTH_TYPES[i]);
+      }
+      return returnValue;
+    };
+
+    cloudStorage.onVerificationDone = function(authType) {
+      var waitList = cloudStorage.verificationWaitList;
+      var index = waitList.indexOf(authType); // Not supported in < IE9
+      if (index !== -1) {
+        waitList.splice(index, 1);
+      }
+      if (waitList.length === 0) {
+        // verification of all accounts is done
+        cloudStorage.verificationInProgress = false;
+        $(cloudStorage).trigger('storages.verification.done');
+      }
+    };
+
+    cloudStorage.verify = function(authType) {
+      console.debug('Verify token for: ' + authType);
+      var imgParams = {
+        token: this.imgToken,
+        account_type: authType
+      };
+
+      var imgUrl = 'https://img.mainframe2.com/verify/?' + $.param(imgParams);
+      $.ajax({
+        url: imgUrl,
+        dataType: 'jsonp',
+        // work with the response
+        success: function(data) {
+          if (data.status == '0') {
+            console.debug('Verification result for: ' + authType);
+            console.debug(data);
+            cloudStorage.onVerificationDone(authType);
+          } else {
+            if (authType != 'box' || (authType == 'box' && cloudStorage.verifyBox)) {
+              console.info('csc. Token Not ignoring failed verification for box');
+              cloudStorage.onExpiredToken(authType);
+            } else {
+              console.info('csc. Ignore failed verification for box');
+              cloudStorage.onVerificationDone(authType);
+            }
+          }
+        }
+      });
+    };
+
+    cloudStorage.onExpiredToken = function(authType) {
+      cloudStorage.removeAuthTypeFromCookie(authType);
+
+      console.debug('csc. Unlink without logout on token not verified');
+      cloudStorage.unlinkWithoutLogoutNoCheck(authType);
+      $(cloudStorage).trigger('storage.update', 'unmount');
+      $(cloudStorage).off('detach.done').on('detach.done', function() {
+        cloudStorage.onVerificationDone(authType);
+      });
+    };
+
+    cloudStorage.removeAuthTypeFromCookie = function(authType) {
+      // token expired or invalid
+      var storages = cloudStorage.get();
+      console.debug('Actual storages');
+      console.debug(storages);
+      delete storages[authType];
+      Cookies.expire('cloudStorages');
+      console.debug('New storages');
+      console.debug(storages);
+      Cookies.set('cloudStorages', JSON.stringify(storages));
+    };
+
+    return cloudStorage;
+  };
+
+</script>
+
+    <script>
+    var cloudStorage;
+    var gwStorageController;
+
+    function toImgStorageName(str) {
+      if(str == 'gdrive') {
+        return 'google-oauth2';
+      } else if(str == 'dropbox') {
+        return 'dropbox-oauth2';
+      } else if(str == 'onedrive') {
+        return 'onedrive-oauth2';
+      }
+      return str;
+    }
+
+    // helper functions
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    function toGatewayStorageName(str) {
+      if(str == 'google-oauth2') {
+        return 'gdrive';
+      } else if(str == 'dropbox-oauth2') {
+        return 'dropbox';
+      } else if(str == 'onedrive-oauth2') {
+        return 'onedrive';
+      }
+      return str;
+    }
+
+    function toHumanStorageName(str) {
+      var gwStorageName = toGatewayStorageName(str);
+      if(gwStorageName == 'gdrive') {
+        gwStorageName = 'Google Drive';
+      } else if(gwStorageName == 'onedrive') {
+        gwStorageName = 'OneDrive';
+      }
+      return capitalizeFirstLetter(gwStorageName);
+    }
+
+    $(document).ready(function() {
+      var token = Cookies.get('cpanelToken', false);
+      cloudStorage = new MF2CloudStorage(token);
+      gwStorageController = new GwStorageController(token);
+
+      function updateCloudStorages() {
+        storages = cloudStorage.get();
+
+        var storageTypes = ['dropbox', 'gdrive', 'box', 'onedrive'];
+        for(var i = 0; i < storageTypes.length; i++) {
+          var prefix = storageTypes[i];
+          var accountType = toImgStorageName(prefix);
+          $mounted = $("." + prefix + '-mounted');
+          $unmounted = $("." + prefix + '-unmounted');
+          if(storages[accountType]) {
+            var username = storages[accountType].user;
+            // display mounted UI
+            $mounted.find(".service-user").data('original-title', username).html(username);
+            $mounted.show();
+            $unmounted.hide();
+          } else {
+            // unmounted
+            $mounted.hide();
+            $unmounted.show();
+          }
+        }
+      }
+
+      cloudStorage.getStatus();
+      updateCloudStorages();
+
+      $(cloudStorage).on('storage.update', function(e, action) {
+        updateCloudStorages();
+      });
+
+      $('.mount-link').unbind('click').click(function() {
+        window.mf2MinimalUI.reconfigLinks();
+        var storageName = $(this).closest('.files-service').data('drive');
+        var accountType = toImgStorageName(storageName);
+        cloudStorage.attach(accountType);
+      });
+
+      $('.unmount-link').unbind('click').click(function() {
+        var storageName = $(this).closest('.files-service').data('drive');
+        var accountType = toImgStorageName(storageName);
+        
+        $('#disconnect').data('storageName', storageName);
+        $('#disconnect').data('accountType', accountType);
+        $('#disconnect').find('.storage-name').html(toHumanStorageName(storageName));
+        $('#disconnect').modal('show');
+      });
+
+      function finalizeDisconnect(accountType) {
+        $('#dialog-continue-detach .btn.ok').one('click', function() {
+          $('#dialog-continue-detach').off('hidden.bs.modal');
+          cloudStorage.unlink(accountType);
+        });
+        $('#dialog-continue-detach .btn.cancel').one('click', function() {
+          $('#dialog-continue-detach').off('hidden.bs.modal');
+          cloudStorage.unlinkWithoutLogout(accountType);
+        });
+        $('#dialog-continue-detach').on('hidden.bs.modal', function() {
+          cloudStorage.unlinkWithoutLogout(accountType);
+        });
+
+        $('#dialog-continue-detach .storage-name').html(toHumanStorageName(accountType));
+        $("#dialog-continue-detach").modal('show');
+      }
+
+      $('#disconnect .unmount-link').unbind('click').click(function() {
+
+        var storageName = $('#disconnect').data("storageName");
+        var accountType = $('#disconnect').data("accountType");
+
+        window.mf2MinimalUI.reconfigLinks();
+
+        if(gwStorageController.hasSession()) {
+          gwStorageController.unmount(storageName);
+          $('#disconnect').modal('hide');
+          gwStorageController.showUnmountingInProgressDialog(storageName);
+          $(gwStorageController).one('change.fs.status', function(eventData) {
+            $('#dialog-unmounting-in-progress').modal('hide');
+            finalizeDisconnect(accountType);
+          });
+        } else {
+          finalizeDisconnect(accountType);
+          $('#disconnect').modal('hide');
+        }
+      });
+
+      window.mf2MinimalUI.bind('player-hidden', function() {
+        updateCloudStorages();
+      });
+
+      window.mf2MinimalUI.bind('session-closed', function() {
+        updateCloudStorages();
+      });
+
+      window.mf2MinimalUI.bind('onTerminalChangeSize', function() {
+        updateCloudStorages();
+      });
+
+    });
+  </script>
+
+  <script src="/embed/error_messages_f0740a424e8ef54b8c520b8d21373ef3.js"></script>
+  <script type="application/javascript">
+
+  $(document).on("click", "#windows-app-settings", function(event){
+    if (!$("#last_onboard_time").hasClass("viewed")){
+       $.ajax({
+              type: "get",
+              url: "/launchpad/setup/clear_last_app",
+              dataType: "json"
+          })
+          .success(function(data) {
+            $("#last_onboard_time").addClass("viewed");
+          });
+    }
+  });
+  $(document).on("click", ".mf2-session-open", function(event) {
+      $('#error-modal').modal('show');
+      $('#error-title').text("Application already open");
+      $('#error-message').html($("#open-session-name").val() + " is currently running. <br/>" +
+          "You can resume or close this app from the bar at the top of your dashboard.");
+  });
+
+  $(document).on("click", "#swhitch_button", function(event) {
+    $("#switchapphelp").modal("hide");
+   var loading = $('<div id="loading-background" class="loading-overlay"><img alt="Loading icon" class="loader spin center" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/img/loading-icon-15d831df1194ba2ae93607397ea7a702.png" /></div>');
+      $('html').append(loading);
+     $.ajax({
+            type: "get",
+            url: "/launchpad/setup/toggle_production_apps",
+            dataType: "json"
+        })
+        .success(function(data) {
+          window.location.reload();
+        });
+  });
+
+  var $containerApps;
+  var $container;
+  var webSocketStatus;
+
+  var options = {
+    isLaunchpad: true,
+    checkWebSocket: false,
+    loadingIconUrl: "https://d1xem3lp7f2hdd.cloudfront.net/assets/img/loading-icon-15d831df1194ba2ae93607397ea7a702.png",
+    regionCode: "us-west-1",
+    gatewayUrl: "https://gateway-p01.mainframe2.com"
+  };
+
+    options.poolId = 46195;
+
+  var mf2Status = new MF2LaunchpadStatus("ACTIVE");
+  window.mf2MinimalUI = new MF2MinimalUI(options, mf2Status);
+
+  $(".app-icon-large").error(function(){
+      console.log("Application image not available - " + $(this).attr("src"));
+      $(this).attr("src", "https://d1xem3lp7f2hdd.cloudfront.net/assets/img/error_app_icon-c6e815d2a99812b7edcde2fdfb91d179.png");
+  });
+
+  // PACKERY Drag With jQueryUI
+  $(document).ready(function() {
+
+      var filesTabActive = false;
+      var url = document.location.toString();
+      if (url.match('#')) {
+        url_array = url.split('#');
+        filesTabActive = (url_array[url_array.length-1] == 'files')
+      }
+      if(!filesTabActive){
+        $('#application_tab_link').parent().addClass('active');
+      }
+
+      BlankSlate.tryTriggerWithInitAsync(BlankSlate.MOBILE_WARNING).then(function (active) {
+        if (active) {
+          mf2MinimalUI.mobileWarningEnabled(true);
+
+          $('#mobile-warning-remember-me input').change(function() {
+            if(this.checked) {
+              mf2MinimalUI.mobileWarningEnabled(false);
+              BlankSlate.deactivateAsync(BlankSlate.MOBILE_WARNING);
+            }
+          });
+        }
+      });
+
+      webSocketStatus = 0; //WebSocketSupportStatus.AVAILABLE
+
+
+
+
+
+        setAppLinkClass('mf2-app-link-waiting-usage-status');
+        retrieveUsage();
+
+        $(document).on("click", ".mf2-app-link-waiting-usage-status", function(event) {
+          // show dialog
+          $('#error-modal').modal('show');
+          $('#error-title').text("Please wait...");
+          $('#error-message').html('Retrieving user status, please try again in a couple of seconds.');
+        });
+          retrieveApps();
+        $(".web-apps.app-list").fadeIn();
+        truncateText('.app-title', {
+            height: 48,
+            wrap: 'letter'
+        });
+
+
+      $(document).on('click', '#resume_player', function() {
+        var activeTerminal = window.mf2MinimalUI.activeTerminal;
+        if (activeTerminal && activeTerminal.isVisible) {
+          activeTerminal.toggleFullSize();
+          $(".small-player-bar").hide();
+        }
+      });
+
+
+      if (!(UserAgent.isPantrySupported() || UserAgent.isIOS())) {
+        $('#error-title').text("Unsupported Browser");
+        $('#error-message').html('Your browser version is not supported for this service.  Copy and paste your link into a compatible browser (we recommend the latest version of Google Chrome).');
+        $('#error-modal').modal('show');
+      } else {
+        BlankSlate.tryTriggerWithInitAsync(BlankSlate.USER_WELCOME_SCREEN).then(function (active) {
+          if (active) {
+            $('#welcome-screen').show();
+            // fix tabs issue
+            $('#welcome-screen .btn').attr('href', 'javascript:;');
+            $('#welcome-screen .btn').click(function() {
+              BlankSlate.deactivateAsync(BlankSlate.USER_WELCOME_SCREEN);
+              $('#welcome-screen').hide();
+              $('#page').removeClass('welcome-page');
+              handleNoAppsText();
+                setTimeout(function() { $('#admin-files-hint').click() }, 500);
+            });
+          }
+        });
+
+        $(BlankSlate)
+         .on("show.admin-profile-hint", function() {
+            $('#admin-profile-hint').fadeIn();
+             $('#admin-profile-hint').on('hidden.bs.popover', function () {
+                BlankSlate.deactivateAsync(BlankSlate.ADMIN_PROFILE_HINT);
+                $('#admin-profile-hint').fadeOut();
+            });
+            $(document).on("click","#admin-profile-hint + .popover .close", function(e) {
+                $('#admin-profile-hint').popover('hide');
+                return false;
+            });
+          })
+          .on("show.admin-files-hint", function() {
+            $('#admin-files-hint').fadeIn();
+            $('#admin-files-hint').on('hidden.bs.popover', function () {
+                BlankSlate.deactivateAsync(BlankSlate.ADMIN_FILES_HINT);
+                $('#admin-files-hint').fadeOut();
+            });
+            $(document).on("click", "#admin-files-hint + .popover .close", function(e) {
+               $('#admin-files-hint').popover('hide');
+                return false;
+            });
+          })
+
+          BlankSlate.tryTriggerAsync(BlankSlate.ADMIN_FILES_HINT);
+          BlankSlate.tryTriggerAsync(BlankSlate.ADMIN_PROFILE_HINT);
+      }
+
+      $('body').on('click', function (e) {
+          $('[data-toggle="popover"]').each(function () {
+              //the 'is' for buttons that trigger popups
+              //the 'has' for icons within a button that triggers a popup
+              if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+               if ($(this).next().is(":visible")){
+                  console.info($(this).next().html());
+                  $(this).popover('hide');
+                }
+              }
+          });
+      });
+      $(document).keydown(function(e){
+       if (e.keyCode === 27)
+        $('[data-toggle="popover"]').each(function () {
+          if ($(this).next().is(":visible")){
+            $(this).popover('hide');
+          }
+        });
+      });
+
+      $("#profile-dropdown-hint").on('click', function() {
+        BlankSlate.tryTriggerAsync(BlankSlate.ADMIN_MENU_HINT);
+        BlankSlate.tryTriggerAsync(BlankSlate.ADMIN_FILES_HINT);
+        BlankSlate.tryTriggerAsync(BlankSlate.ADMIN_PROFILE_HINT);
+      });
+      $("#files_tab_link").on('click', function() {
+        BlankSlate.tryTriggerAsync(BlankSlate.ADMIN_MENU_HINT);
+        BlankSlate.tryTriggerAsync(BlankSlate.ADMIN_FILES_HINT);
+        BlankSlate.tryTriggerAsync(BlankSlate.ADMIN_PROFILE_HINT);
+      });
+
+      $('#admin-menu-hint-dropdown').on('shown.bs.dropdown', function() {
+        BlankSlate.tryTriggerAsync(BlankSlate.ADMIN_MENU_HINT);
+        BlankSlate.tryTriggerAsync(BlankSlate.ADMIN_FILES_HINT);
+        BlankSlate.tryTriggerAsync(BlankSlate.ADMIN_PROFILE_HINT);
+      });
+
+      var notificationsController = new LaunchpadWebNotificationsController({"showWebNotifications":true,"isIconShown":true,"iconPath":"//d1xem3lp7f2hdd.cloudfront.net/assets/img/logo-web-notification.png","iconPathTransparent":"//d1xem3lp7f2hdd.cloudfront.net/assets/img/logo-web-notification-transparent.png","iconChromeDisabled":"//d1xem3lp7f2hdd.cloudfront.net/assets/img/logo-web-notification-background.png","cpanelUrl":"https://app.fra.me","webNotifications":{"instanceReady":{"title":"New instance is ready","body":"Your instance is up and running.","notificationType":"instanceReady","sendFallbackEmail":false},"sessionInactivityTimeout":{"title":"Disconnected due to inactivity","body":"Your session was disconnected after inactivity to conserve resources.","notificationType":"sessionInactivityTimeout","sendFallbackEmail":false},"sessionInactivityTimeoutOneMinute":{"title":"Disconnecting in 60 seconds...","body":"Sill there? Your session will disconnect within 60 seconds...","notificationType":"sessionInactivityTimeoutOneMinute","sendFallbackEmail":false},"sessionDurationTimeout":{"title":"Your session has ended","body":"You've reached a maximum time allowed, and your session is now closed. ","notificationType":"sessionDurationTimeout","sendFallbackEmail":false},"sessionDurationTimeoutOneMinute":{"title":"Sorry to interrupt you, but...","body":"You are a minute away from the session time limit. Please save your work and close all applications.","notificationType":"sessionDurationTimeoutOneMinute","sendFallbackEmail":false}}}, mf2Status, mf2MinimalUI);
+
+      mf2MinimalUI.bind('player-hidden', function(e) {
+        $('#new-windows-app').hide().removeClass("active");
+        BlankSlate.deactivateAsync(BlankSlate.NEW_WINDOWS_APP);
+        BlankSlate.tryTriggerAsync(BlankSlate.ADMIN_MENU_HINT);
+        BlankSlate.tryTriggerAsync(BlankSlate.ADMIN_FILES_HINT);
+        BlankSlate.tryTriggerAsync(BlankSlate.ADMIN_PROFILE_HINT);
+        showOlarkChat();
+
+        if ($container && $container.data('packery')) {
+            $container.packery('layout');
+        }
+        if ($containerApps && $containerApps.data('packery')) {
+            $containerApps.packery('layout');
+        }
+      });
+      mf2MinimalUI.bind('player-shown', function() {
+        hideOlarkChat();
+      });
+      mf2MinimalUI.bind('onTerminalChangeSize', function() {
+        hideOlarkChat();
+      });
+      mf2MinimalUI.bind('session-closed', function(e) {
+          var distance = 0;
+          if(!isNaN(e.distance)) {
+            distance = Math.round(e.distance).toFixed(0).replace(/\d(?=(\d{3})+)/g, '$&,');
+          }
+          if (distance == 0){
+            $("#session-closed .modal-body").html("<p>Did you notice there was nothing to install? No plugins, extensions, or that pesky Java.</p><p><strong>Next, learn how to install a new Windows app yourself.</strong></p>");
+          }
+          $('#first-distance').html(distance);
+          $('#new-windows-app').hide().removeClass("active");
+          BlankSlate.deactivateAsync(BlankSlate.NEW_WINDOWS_APP);
+          BlankSlate.tryTriggerAsync(BlankSlate.ADMIN_MENU_HINT);
+          BlankSlate.tryTriggerAsync(BlankSlate.ADMIN_FILES_HINT);
+          BlankSlate.tryTriggerAsync(BlankSlate.ADMIN_PROFILE_HINT);
+          showOlarkChat();
+
+          if ($container && $container.data('packery')) {
+              $container.packery('layout');
+          }
+          if ($containerApps && $containerApps.data('packery')) {
+              $containerApps.packery('layout');
+          }
+      });
+
+      mf2MinimalUI.bind('persistentSessionDisconnected', function() {
+        $('.pre-session-bar').fadeIn();
+        $('.last-app-closed-bar').hide();
+      });
+
+      mf2MinimalUI.bind('wait-for-elasticity', function() {
+        $('.orange.status.loading.spin').show();
+        $('.orange.status.loading').html('Waiting for first available instance... (approx. 3 minutes) &nbsp;');
+        Cookies.set("wait-for-elasticity", true, { expires: 600 }); //10 minutes cookie expiration
+      });
+
+      mf2MinimalUI.bind('wait-for-elasticity-completed', function() {
+        $('.orange.status.loading.spin').hide();
+        $('.orange.status.loading').html('');
+        Cookies.expire("wait-for-elasticity");
+      });
+
+      // $('.windows-apps').hide();
+      $container = $('.web-apps').packery({
+          columnWidth: '.app',
+          gutter: 0,
+          rowHeight: '.app',
+          isHorizontal: false,
+          percentPosition: true,
+      });
+      // get item elements, jQuery-ify them
+      var $itemElems = $container.find('.app');
+      // make item elements draggable
+
+      $itemElems.draggable({
+          stop: function(event, ui) {
+            var xmove = ui.position.left - ui.originalPosition.left;
+            var ymove = ui.position.top - ui.originalPosition.top;
+            if (Math.abs(xmove) > 8 || Math.abs(ymove) > 8)
+              $(event.target).children().children().children().one('click', function(e) {
+                  e.stopImmediatePropagation();
+              });
+          }
+      });
+
+      // bind Draggable events to Packery
+      $container.packery('bindUIDraggableEvents', $itemElems);
+      $container.packery('on', 'dragItemPositioned', function(pckryInstance, draggedItem) {
+          setTimeout(function() {
+              $container.packery();
+          }, 10);
+          orderWebItems();
+      });
+
+      $container.packery();
+
+      $('#web-apps-dropdown input[type="checkbox"]').on('switchChange.bootstrapSwitch', function(event, state) {
+          refreshWebApps($(this).attr('id'), state);
+      });
+
+      $(".web-apps .app-link").click(function() {
+
+            window.open($(this).prop('rel'),
+                '_blank' // <- This is what makes it open in a new window.
+            )
+      });
+
+      $('#site-navigation .nav-tabs a').on('shown.bs.tab', function() {
+        var appType = $(this).html();
+        if (appType.toLowerCase() == "applications") {
+          console.info("site-navigation application tab clicked");
+          handleNoAppsText();
+          $containerApps.packery();
+          $container.packery();
+        }
+      });
+  });
+
+  function hideOlarkChat() {
+    if (typeof(olark) !== 'undefined') {
+      olark('api.box.hide');
+    }
+  }
+
+  function showOlarkChat() {
+    if (typeof(olark) !== 'undefined') {
+      olark('api.box.show');
+    }
+  }
+
+  var sortOrder = [];
+
+
+  function orderItems() {
+      var itemElems = $containerApps.data('packery').getItemElements();
+      // reset / empty oder array
+      sortOrder.length = 0;
+      for (var i = 0; i < itemElems.length; i++) {
+          sortOrder[i] = itemElems[i].getAttribute("data-app-id");
+      }
+      // save tabindex ordering
+      data = {
+          sort: sortOrder.toString()
+      };
+      $.ajax({
+              type: "post",
+              url: '/launchpad/setup/sort',
+              data: data,
+              dataType: "json"
+          })
+          .success(function(data) {
+
+          });
+
+  }
+
+  var webAppSortOrder = [];
+
+  function orderWebItems() {
+      var itemElems = $container.data('packery').getItemElements();
+      // reset / empty oder array
+      webAppSortOrder.length = 0;
+      for (var i = 0; i < itemElems.length; i++) {
+          webAppSortOrder[i] = itemElems[i].getAttribute("data-web-id");
+      }
+      // save tabindex ordering
+      data = {
+          sort: webAppSortOrder.toString()
+      };
+      $.ajax({
+              type: "post",
+              url: '/launchpad/setup/web-sort',
+              data: data,
+              dataType: "json"
+          })
+          .success(function(data) {
+
+          });
+
+  }
+
+    $(document).on('click', '.turn-off-sandbox', function() {
+      var href = this.href;
+      $('#confirmation-modal .modal-body p').html("Are you sure you want to power off your system?");
+      $('#confirmation-modal').modal('show');
+      $('#confirmation-modal .btn.confirm').unbind('click').click(function() {
+      $('#confirmation-modal').modal('hide');
+        powerOffSystem();
+      });
+    });
+
+   function powerOffSystem() {
+    mf2MinimalUI.showLoading();
+
+    $.ajax({
+      type: "GET",
+      url: '/home/turn_off_sandbox.json',
+    })
+    .success(function(data) {
+
+      if(!data.error) {
+        console.debug('sandbox turn off success');
+        $("#sandbox-button").hide();
+        $("#sandbox-button-on").hide();
+      } else {
+        showError(data.error);
+      }
+    })
+    .error(function(xhr, textStatus, errorThrown) {
+      console.log('error ' + (errorThrown ? errorThrown : xhr.status));
+      console.log(xhr);
+      showError('Request error');
+    });
+  }
+
+  function showError(error) {
+    mf2MinimalUI.hideLoading();
+    mf2MinimalUI.showScrolling();
+
+    $('#error-modal').modal('show');
+    $('#error-message').html(error);
+  }
+
+  function handleNoAppsText() {
+      if ($('.windows-apps li.app:visible').length > 0) {
+          $('#no-apps').hide();
+      } else {
+          $('.apps-loading').hide();
+          $('#no-apps').show();
+          if ($('#site-navigation .nav-tabs li.active a').html().toLowerCase() == "applications"){
+          $('.windows-apps').hide();
+          }
+          $("#new-windows-app").hide();
+      }
+  }
+
+  //this is not retrieving anything :)
+  function retrieveApps(){
+    mf2Status.startPolling();
+    handleNoAppsText();
+    $('.section-settings .dropdown-menu').click(function(e) {
+      e.stopPropagation();
+    });
+    $(".dropbox-unmounted .mount-link.service-connection").removeClass("disabled");
+    truncateText('.app-title', {
+        height: 48,
+        wrap: 'letter'
+    });
+     mf2MinimalUI.bindMF2PlayersToLinks();
+      $containerApps = $('.windows-apps').packery({
+        columnWidth: '.app',
+        gutter: 0,
+        rowHeight: '.app',
+        isHorizontal: false,
+        percentPosition: true
+    });
+
+    // get item elements, jQuery-ify them
+    var $itemElemsApps = $containerApps.find('.app');
+    // make item elements draggable
+    $itemElemsApps.draggable({
+        stop: function(event, ui) {
+            // event.toElement is the element that was responsible
+            // for triggering this event. The handle, in case of a draggable.
+          var xmove = ui.position.left - ui.originalPosition.left;
+          var ymove = ui.position.top - ui.originalPosition.top;
+          if (Math.abs(xmove) > 8 || Math.abs(ymove) > 8)
+            $(event.target).children().children().children().one('click', function(e) {
+                e.stopImmediatePropagation();
+            });
+
+        }
+    });
+
+    // bind Draggable events to Packery
+    $containerApps.packery('bindUIDraggableEvents', $itemElemsApps);
+    $containerApps.packery('on', 'dragItemPositioned', function(pckryInstance, draggedItem) {
+        setTimeout(function() {
+            $containerApps.packery();
+        }, 10);
+        orderItems();
+    });
+
+    $('#windows-apps-dropdown input[type="checkbox"]').on('switchChange.bootstrapSwitch', function(event, state) {
+      if (state == true) {
+        BlankSlate.tryTriggerAsync(BlankSlate.NEW_WINDOWS_APP);
+      }
+      refreshApps($(this).attr('id'), state);
+    });
+    $("#appswitch").click(function(){
+      $("#switchapphelp").modal("show");
+    });
+    $("[data-toggle='switch']").bootstrapSwitch();
+  }
+
+  function refreshApps(id, state) {
+      //  console.log(state);
+      $('.windows-apps').hide();
+      $('#no-apps').hide();
+      if ($("#new-windows-app").hasClass("active")){
+        $("#new-windows-app").hide();
+      }
+      $('.apps-loading').fadeIn();
+
+      // load apps
+      $.ajax({
+              type: "post",
+              url: '/launchpad/setup/apps',
+              data: {
+                  app_id: id,
+                  visible: state
+              },
+              dataType: "json"
+          })
+          .success(function(data) {
+              $('.apps-loading').hide();
+              if (!data.error) {
+                  $('.mf2-app-link').each(function() {
+                         $(this).data('apps-in-menu', data.applist);
+                  });
+                  mf2MinimalUI.bindMF2PlayersToLinks();
+                  if (state) {
+                      $('.windows-apps').find('#app-' + id).show();
+                  } else {
+                      $('.windows-apps').find('#app-' + id).hide();
+                  }
+                  $('.windows-apps').show();
+                  handleNoAppsText();
+                  var num=$('.windows-apps > li:visible').length;
+                  if ($("#new-windows-app").hasClass("active") && num >0 && num <3){
+                    $("#new-windows-app").show();
+                  }
+              }
+              $containerApps.packery();
+
+          });
+  }
+
+  
+
+
+          var expiredCls = 'demo-user';
+    var usagePollingTimeout;
+    function stopUsagePolling(){
+      clearTimeout(usagePollingTimeout);
+    }
+    function retrieveUsage(){
+    $.ajax({
+    type: "get",
+    url: '/launchpad/setup/retrieve_usage',
+    dataType: "json"
+    })
+    .success(function(data) {
+        $('.mf2-app-link').removeClass('mf2-app-link-waiting-usage-status');
+        if(data.usage_message != 'EXPIRED') {
+        $(".profile-hours").html('Demo account active, ' + data.days_left + ' days remaining');
+        } else {
+        $(".profile-hours").html('EXPIRED');
+        setAppLinkClass('mf2-app-link-expired ' + expiredCls);
+        }
+    });
+
+    usagePollingTimeout = setTimeout(function() {
+    retrieveUsage();
+    }, 60000);
+    }
+
+
+
+  function setAppLinkClass(cls) {
+      var appLinkClasses = 'mf2-app-link-websocket-failed mf2-session-open mf2-app-link-disabled mf2-app-link-expired mf2-app-link-sandbox-down mf2-app-link-sandbox-maintenance mf2-app-link-sandbox-in-use mf2-app-link-waiting-usage-status ' + expiredCls;
+      $('.mf2-app-link').removeClass(appLinkClasses).addClass(cls);
+  }
+
+    $(document).on("click", ".mf2-app-link-expired.it-user", function(event) {
+      // show dialog
+      $('#error-modal').modal('show');
+      $('#error-title').text("User expired");
+      $('#error-message').html('Your account is expired. Please visit <a href=\"\">link<\/a> in order to continue using your application(s)');
+    });
+    $(document).on("click", ".mf2-app-link-expired.demo-user", function(event) {
+      // show dialog
+      $('#error-modal').modal('show');
+      $('#error-title').text("Upgrade to Frame Personal and run Windows apps");
+      $('#error-message').html('Your demo of Frame is over. To use Windows apps on Frame, <a href="/launchpad/setup/upgrade">start a free 7-day trial"</a>. Why start a trial:<br/>' +
+        '- Install and use any Windows app on your own Frame system, access from anywhere<br/>' +
+        '- Minimize latency by picking a Frame data center that’s closest to you and your users.<br/>' +
+        '- No limits on session duration');
+    });
+
+  function truncateText(selector, additionalOpts) {
+      var opts = {
+          /*  The HTML to add as ellipsis. */
+          ellipsis: '... ',
+
+          /*  How to cut off the text/html: 'word'/'letter'/'children' */
+          wrap: 'word',
+
+          /*  Wrap-option fallback to 'letter' for long words */
+          fallbackToLetter: true,
+
+          /*  jQuery-selector for the element to keep and put after the ellipsis. */
+          after: null,
+
+          /*  Whether to update the ellipsis: true/'window' */
+          watch: false,
+
+          /*  Optionally set a max-height, if null, the height will be measured. */
+          height: null,
+
+          /*  Deviation for the height-option. */
+          tolerance: 0,
+
+          /*  Callback function that is fired after the ellipsis is added,
+            receives two parameters: isTruncated(boolean), orgContent(string). */
+          callback: function(isTruncated, orgContent) {},
+
+          lastCharacter: {
+
+              /*  Remove these characters from the end of the truncated text. */
+              remove: [' ', ',', ';', '.', '!', '?'],
+
+              /*  Don't add an ellipsis if this array contains
+                the last character of the truncated text. */
+              noEllipsis: []
+          }
+      };
+      $.extend(opts, additionalOpts);
+      $(selector).dotdotdot(opts);
+  }
+
+  function refreshWebApps(id, state) {
+      $('.web-apps-loading').fadeIn();
+      $('.web-apps').hide();
+      // load apps
+      $.ajax({
+              type: "post",
+              url: '/launchpad/setup/web-apps',
+              data: {
+                  app_id: id,
+                  visible: state
+              },
+              dataType: "json"
+          })
+          .success(function(data) {
+              $('.web-apps-loading').hide();
+              if (!data.error) {
+                  if (state) {
+                      $('.web-apps').find('#app-' + id).show();
+                  } else {
+                      $('.web-apps').find('#app-' + id).hide();
+                  }
+              }
+              $('.web-apps').fadeIn();
+              $container.packery();
+
+          });
+  }
+  </script>
+
+  <script>
+    $(document).on('click', '#close_session', function() {
+        $('#quit-modal').modal('show');
+    });
+    var quitTimeout;
+    var quitCounter = 0;
+
+    $('#quit-modal').on('shown.bs.modal', function() {
+        clearTimeout(quitTimeout);
+        quitCounter = 61;
+        $('#disconnect-count').text(61);
+        (function countDown(){
+            if (!$("#quit-modal").hasClass('in')) {
+                clearTimeout(quitTimeout);
+                return;
+            }
+            quitCounter--;
+            if (quitCounter > 0) {
+                $('#close-count').text(quitCounter);
+                quitTimeout = setTimeout(countDown, 1000);
+            } else {
+                clearTimeout(quitTimeout);
+                $("#quit-modal").modal('hide');
+                quitSession();
+            }
+        })();
+    });
+
+    $(document).on('click', '#close_player', function() {
+        $('#quit-modal').modal('show');
+    });
+    $(document).on('click', '#quit-confirm', function(){
+        $('#quit-modal').modal('hide');
+        quitSession();
+    });
+
+    function quitSession() {
+        if ($("#mf2-modal").length > 0){
+            var anchors = $('.mf2-app-link');
+            if (anchors.length > 0){
+                anchors.each(function () {
+                    var mf2 = $(this).data('mf2');
+                    if (mf2) {
+                        mf2.closeSession();
+                    }
+                });
+                $(".small-player-bar").hide();
+                if(this.disconnectTimeout){
+                    clearTimeout(this.disconnectTimeout);
+                }
+            }
+        } else {
+            var type = $("#resume_session").parents('.session-bar').data('type');
+
+            $("#resume_session").addClass('closing');
+            $("#session_buttons_bar, #last-app-closed-buttons-bar").hide();
+            $("#session_buttons_bar, #last-app-closed-buttons-bar").after('<span class="closing"><img alt="Spinner fffafa 16" class="spin" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/img/spinner_fffafa_16-d5a752d940dfe015add504af486d9b7c.png" /> Closing session...</span>');
+
+            mf2MinimalUI.closeActiveSessionAsync(type).then(function () {
+                $("#resume_session").removeClass('closing');
+                $("span.closing").remove();
+                $(".session-bar").hide();
+                $(".last-app-closed-bar").hide();
+
+                $("#session_buttons_bar, #last-app-closed-buttons-bar").show();
+                mf2Status.stopPolling();
+                mf2Status.startPolling();
+            });
+        }
+    }
+</script>
+
+<script src="https://d1xem3lp7f2hdd.cloudfront.net/assets/cpanel/uiComponents-76a86d09d00e93f718e64d2b8ca8b56f.js"></script>
+<script>
+  $(document).ready(function() {
+      $(document).on('sessions.closed', function(e, link) {
+        var $link = $(link);
+        var redirectUrl = $link.attr("href");
+        if($link.hasClass('confirm-google-signout')) {
+          var modal = $("#signout_from_google_confirm-modal");
+          modal.modal('show');
+          modal.find('.btn.confirm').click(function() {
+            // signout from google
+            var logoutUrl = 'https://accounts.google.com/logout';
+            var loadingImgSrc = "https://d1xem3lp7f2hdd.cloudfront.net/assets/img/loading-icon-15d831df1194ba2ae93607397ea7a702.png";
+
+            var backgroundLogout = new BackgroundLogout(logoutUrl, loadingImgSrc, { logoutMessage: 'Logging out from Google...' });
+            backgroundLogout.executeAsync()
+              .then(function() {
+                localStorage.clear();
+                window.location = redirectUrl;
+              });
+          });
+
+          modal.find('.btn.cancel').click(function() {
+            localStorage.clear();
+            window.location = redirectUrl;
+          });
+        } else {
+          localStorage.clear();
+          window.location = redirectUrl;
+        }
+      });
+  });
+</script>
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36682250-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+   })();
+</script>
+
+  <div id="close-all-sessions-modal" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header clear">
+  <h1 class="modal-title left">KEEP SESSION ACTIVE?</h1>
+</div>
+
+<div class="modal-body">
+  <p>You still have an active session running.</p>
+  <p>Do you wish to keep your session active so you can resume from another device or come back later? <br>
+   (If not, we will power off your session which may cause you to <strong>lose unsaved work</strong>.)</p>
+</div>
+
+      <div class="modal-footer clear">
+        <a href="javascript:;" class="btn btn-green right confirm" data-dismiss="modal">Power off</a>
+        <a href="javascript:;" class="btn btn-link cancel right" data-dismiss="modal">Keep session active </a>
+      </div>
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div>
+
+
+  <script>
+    $(document).ready(function() {
+
+      $.ajax({
+        type: "GET",
+        url: '/launchpad/setup/get_usage_map',
+        dataType: "json"
+      })
+      .success(function(data){
+        $('#phours').html(data.table.balance);
+      });
+
+      var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
+      var h = $("#colophon").height() + 50;
+      $('.page-scroll').css('padding-bottom', h + "px");
+
+      $('#reset-tips').click(function() {
+        var loading = $('<div id="loading-background" class="loading-overlay"><img alt="Loading icon" class="loader spin center" src="https://d1xem3lp7f2hdd.cloudfront.net/assets/img/loading-icon-15d831df1194ba2ae93607397ea7a702.png" /></div>');
+        $('html').append(loading);
+        $('#loading-background').show();
+
+        $.ajax({
+                  type: "PATCH",
+                  url: '/launchpad/setup/reset_tips'
+              })
+              .success(function(data) {
+                window.location = "/";
+                })
+              .error(function() { $('#loading-background').hide(); });
+        });
+
+      });
+
+  
+
+      $(".dropdown-menu").on("click" , "li.mf2-link.disabled", function(e) {
+        e.preventDefault(); 
+        return false
+      });
+      $(document).on("click" , ".btn.disabled", function(e) {
+          e.preventDefault(); 
+          return false
+      });
+      $(document).on("click", "#masthead .explain-hours", function(event){
+        event.stopPropagation();
+        $("#usagehelp").modal("show");
+      });
+
+      $(document).on("click", ".dropdown-menu li.email", function(event){
+        $(".dropdown.profile").prop("not_closable", true);
+      });
+
+     
+      $(document).on("click", ".mf2-app-link-expired", function(event){
+        $('#loading-background').hide();
+        $( '#error-modal').modal('show');
+            $( '#error-title').text("DEMO EXPIRED");
+            launchpad_upgrade
+            $( '#error-message').html('Your Frame Demo account has expired. To continue, please upgrade to Personal Trial. <a href="/launchpad/setup/upgrade"></a>.');
+
+      });
+        $(document).on("click", ".mf2-app-link-expired", function(event){
+          if ($(this).hasClass("it-user") || $(this).hasClass("demo-user"))
+            return;
+
+          $( '#error-modal').modal('show');
+          $( '#error-title').text("YOUR TEAM ACCOUNT HAS RAN OUT OF HOURS.");
+          $( '#error-message').html(
+             "Your team has used all of your hours and access to Windows apps is locked at this time. To continue, please ask your administrator to refill balance and unlock the account.");
+        });
+    function setAppLinkClass(cls) {
+      var appLinkClasses = 'mf2-app-link-websocket-failed mf2-session-open mf2-app-link-disabled mf2-app-link-expired mf2-app-link-sandbox-down mf2-app-link-sandbox-maintenance mf2-app-link-sandbox-in-use mf2-app-link-waiting-usage-status';
+      $('.mf2-app-link').removeClass(appLinkClasses).addClass(cls);
+    }
+
+  </script>
+  <div id="launchpad-help" class="modal fade" tabindex="-1">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <a href="#" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+                  <h1 class="modal-title">Help</h1>
+              </div>
+              <div class="modal-body">
+                <p>Here’s a quick list of tips you can use to make the most out of using your Launchpad:</p>
+<p>
+- Check system status (upper right corner):<br/>
+ ---> Green:  the system is ready<br>
+ ---> Orange:  the system will be ready in a couple of minutes<br>
+ ---> Red:  your admin needs to add capacity<br>
+- Resize your browser and the app will scale automatically<br>
+- The 5 circles in the lower left corner show your network status<br>
+- Launch other apps from the gears menu in the lower left corner<br>
+- "Disconnect" keeps your session active<br>
+- "Quit" or "Power off" will end your session<br>
+
+</p>
+
+<p>Don’t see what you’re looking for? View our <a href='http://docs.fra.me' target="_blank">documentation</a> or try our <a href='http://forum.fra.me' target="_blank">Forum</a>, where you can post questions and search through existing discussions.</p>
+
+              </div>
+              <div class="modal-footer clear">
+                  <a href="#" id="reset-tips" class="btn btn-link left" data-dismiss="modal" aria-hidden="true">RESET TIPS</a>
+                  <a href="#" class="btn cancel" data-dismiss="modal" aria-hidden="true">OK</a>
+              </div>
+          </div>
+          <!-- .modal-content -->
+      </div>
+      <!-- .modal-dialog -->
+  </div>
+</body>
+<!-- END BODY -->
+</html>
